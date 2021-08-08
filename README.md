@@ -3,7 +3,6 @@
 
 ***
 Este projeto é uma fork do [zeldabotwstreetview](https://github.com/nassimsoftware/zeldabotwstreetview) e ainda está em desenvolvimento. 
-
 ### Visite o site original:
 
 * [GitHub](https://github.com/nassimsoftware/zeldabotwstreetview)
