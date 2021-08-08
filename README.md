@@ -11,7 +11,7 @@ Este projeto é uma fork do [zeldabotwstreetview](https://github.com/nassimsoftw
 * [YouTube Channel](https://www.youtube.com/watch?v=EYtB1rkwcfU)
 
 ***
-## 🛠 Ajustes e melhorias
+## 🛠 Próximas atualizações:
 
 As próximas atualizações serão voltadas nas seguintes tarefas:
 
