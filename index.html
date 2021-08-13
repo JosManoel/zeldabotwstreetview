@@ -19,56 +19,58 @@
     <title>Zelda BotW Street View</title>
 </head>
 
-<body>
+<body>   
     <div class="search">
         <div class="container">
             <h1 id="localName" class="lightBlack">Search by location</h1>
         </div>
     </div>
 
-    <div class="navMenu">
-        <div id="more">
-            <div class="moreOptions">
-                <img src="./assets/icons/more.png" class="icon">
-                <h1>More</h1>
+    <input type="checkbox" id="panelCheck">
+        
+    <div id="panel">
+        <div class="panel">
+            <label for="panelCheck" class="expand">
+                <div class="icon" id="more"></div>
+            </label>
+            
+            <div class="title">
+                <p class="lightBlack">Google maps' street view meets Zelda Breath of The Wild</p>
             </div>
-        </div>
 
-        <div id="panel" class="hide">
-            <div class="panel">
-                <div id="hide" class="expand">
-                    <div class="icon" id="more"></div>
+            <section>
+                <iframe src="https://www.youtube.com/embed/EYtB1rkwcfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            
+            <div id="list">
+                <div class="linkList">
+                    <a href="https://github.com/nassimsoftware/zeldabotwstreetview" target="_blank">
+                        <img src="./assets/icons/github.png" class="icon">
+                        Source on Github
+                    </a>
+
+                    <a href="https://twitter.com/LabNassim" target="_blank">
+                        <img src="./assets/icons/twitter.png" class="icon">
+                        Follow me on Twitter
+                    </a>
+
+                    <a href="https://www.youtube.com/channel/UCO_O0pw4GNZr6rs8JVKJ_hg?sub_confirmation=1" target="_blank">
+                        <img src="./assets/icons/youtube.png" class="icon">
+                        Subscribe to my YT channel
+                    </a>
                 </div>
-                
-                <div class="title">
-                    <p class="lightBlack">Google maps' street view meets Zelda Breath of The Wild</p>
-                </div>
-    
-                <section>
-                    <iframe src="https://www.youtube.com/embed/EYtB1rkwcfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </section>
-                
-                <div id="list">
-                    <div class="linkList">
-                        <a href="https://github.com/nassimsoftware/zeldabotwstreetview" target="_blank">
-                            <img src="./assets/icons/github.png" class="icon">
-                            Source on Github
-                        </a>
-    
-                        <a href="https://twitter.com/LabNassim" target="_blank">
-                            <img src="./assets/icons/twitter.png" class="icon">
-                            Follow me on Twitter
-                        </a>
-
-                        <a href="https://www.youtube.com/channel/UCO_O0pw4GNZr6rs8JVKJ_hg?sub_confirmation=1" target="_blank">
-                            <img src="./assets/icons/youtube.png" class="icon">
-                            Subscribe to my YT channel
-                        </a>
-                    </div>
-                </div>              
-            </div>
+            </div>              
         </div>
+    </div>
 
+    <label for="panelCheck" class="panelLabel">
+        <div class="moreOptions">
+            <img src="./assets/icons/more.png" class="icon">
+            <h1>More</h1>
+        </div>
+    </label>
+
+    <div class="navMenu">     
         <div class="menu">     
             <div id="goBack">
                 <img src="./assets/icons/explore.png" class="icon">

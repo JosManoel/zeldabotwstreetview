@@ -16,6 +16,11 @@ As próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] Criar nova UI
 - [x] Implementar novos controles
-- [ ] Implementar animações
+- [x] Implementar animações
 - [ ] Implementar caixa de pesquisa
 
+https://edrodrigues.com.br/blog/20-incriveis-botoes-animados-de-css-puro/
+
+https://www.youtube.com/watch?v=LEN_iNk3FpU&t=542s
+
+https://www.youtube.com/watch?v=yDlddqhuoGY

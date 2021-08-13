@@ -5,15 +5,15 @@ document.getElementById('submit').addEventListener('click', () => {
     parent.window.location.href = "https://forms.gle/sQbwSUEczAYC68W8A";
 });
 
-document.getElementById('more').addEventListener('click', () => {
-    panel.classList.remove('hide');
-    moreBtn.classList.add('hide');
-});
+// document.getElementById('more').addEventListener('click', () => {
+//     panel.classList.remove('hide');
+//     moreBtn.classList.add('hide');
+// });
 
-document.getElementById('hide').addEventListener('click', () => {        
-    panel.classList.add('hide');
-    moreBtn.classList.remove('hide');
-});
+// document.getElementById('hide').addEventListener('click', () => {        
+//     panel.classList.add('hide');
+//     moreBtn.classList.remove('hide');
+// });
 
 function isMobile(){
     return window.innerWidth <= 856 ? true : false;
