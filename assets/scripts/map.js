@@ -1,25 +1,35 @@
-var moreBtn = document.getElementById('more');
-var panel = document.getElementById('panel');
+const locations = new Map(); 
+var searchText = document.getElementById('searchText');
+
+searchText.addEventListener('keyup', function(e) {
+    let key = e.which || e.keyCode;
+    if(searchText.value != ""){
+        if(key == 13){
+            searchLocal(searchText.value);
+        }
+    }
+});
+
+
+document.getElementById('searchButton').addEventListener('click', () => {
+    searchLocal(searchText.value);
+});
 
 document.getElementById('submit').addEventListener('click', () => {
     parent.window.location.href = "https://forms.gle/sQbwSUEczAYC68W8A";
 });
 
-// document.getElementById('more').addEventListener('click', () => {
-//     panel.classList.remove('hide');
-//     moreBtn.classList.add('hide');
-// });
-
-// document.getElementById('hide').addEventListener('click', () => {        
-//     panel.classList.add('hide');
-//     moreBtn.classList.remove('hide');
-// });
+function searchLocal(local){
+    if(locations.has(local)){
+        initStreetViewer(locations.get(local));
+    }
+}
 
 function isMobile(){
     return window.innerWidth <= 856 ? true : false;
 }
 
-function initStreetViewer(panoramaData) {
+function initStreetViewer(panoramaData){
     const panoramaViewer = pannellum.viewer('panorama', panoramaData);
     let panorama = document.getElementById('panorama');
     let controls = document.getElementById('controls');
@@ -48,34 +58,36 @@ function initStreetViewer(panoramaData) {
     }
 
     goBack.addEventListener('click', () => {
-
         panoramaViewer.destroy();
 
         panorama.classList.add('hide');
         controls.classList.add('hide');
         map.classList.remove('hide');
 
-        setLocationName("Search by location");
-    })
+        searchText.value = "";
+    });  
 }
 
 async function mapSpotsToMap() {
     const spotsData = await (await fetch('./assets/data/spotsData.json')).json();
-    for (let spot of spotsData) {
-        let position = L.latLng([spot.y, spot.x]);
 
+    for (let spot of spotsData) {
+
+        locations.set(spot.locationName, spot.panoramaData);
+
+        let position = L.latLng([spot.y, spot.x]);
         L.marker(position).addTo(map)
         .bindPopup(spot.locationName)
         .on('click', () => {
             initStreetViewer(spot.panoramaData);
             setLocationName(spot.locationName);
-        })
+        });
     }
 }
 
 // Set location name on panel
 function setLocationName(locationName){
-    document.querySelector("#localName").innerHTML = locationName;
+    searchText.value = locationName;
 }
 
 //creates map 

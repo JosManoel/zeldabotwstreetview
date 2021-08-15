@@ -4,6 +4,7 @@
 *,
 *::before,
 *::after {
+    outline: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
 }
@@ -32,9 +33,7 @@ iframe {
 
 .lightBlack {color: rgb(56, 56, 56);}
 
-.hide {
-    display: none;
-}
+.hide {display: none;}
 
 .icon{
     width: 16px;
@@ -56,25 +55,45 @@ iframe {
     left: 0;
     width: 95%;
     margin-top: 8px;
-    padding: 16px;
     border-radius: 8px;
+    padding: 12px;
     display: flex;
     align-items: center;
-    background-color: white;    
+    background-color:white;   
     box-shadow: 0px 2px 4px rgba(45, 45, 45, 0.2);
 }
 
-.search h1{
-    font-size: 1rem;
-    font-weight: 400;
-    color: rgb(167, 167, 167);
+.search input{
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    background: none;
 }
 
-.navMenu{
-    width: 100%;
-    height: auto;
-    z-index: 2;
-    position: absolute;
+.search button{
+    transition: 300ms;
+    display: flex;
+    background: none;
+    border: none;
+    opacity: 60%;
+    margin-right: 8px;
+    padding: 0;
+    padding-right: 8px;
+    border-right: solid;
+    border-width: 1px;
+    border-color: rgb(204,204,204);
+    cursor: pointer;
+}
+
+.search button img{
+    width: 28px;
+    height: 28px;
+}
+
+.search button:hover{
+    transition: 300ms;
+    opacity: 80%;
 }
 
 #panelCheck{display: none;}
@@ -84,13 +103,16 @@ iframe {
     opacity: 1;
 }
 
-#panelCheck:checked ~ .panelLabel{opacity: 0;}
+#panelCheck:checked ~ .panelLabel{
+    display: none;
+    opacity: 0;
+}
 
 #panel{
     bottom: -500px;
     opacity: 0;
     width: 100%;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,7 +143,7 @@ iframe {
     justify-content: center;
     z-index: 2;
     position: absolute;
-    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all .2s linear;
 }
 
 .moreOptions{
@@ -149,9 +171,8 @@ iframe {
     margin-right: 12px;
 }
 
-.panel iframe{
-    margin-bottom: 24px;
-}
+.panel iframe{margin-bottom: 24px;}
+
 .expand{
     margin-bottom: 12px;
     display: flex;
@@ -187,6 +208,13 @@ iframe {
 .linkList{
     display: flex;
     flex-direction: column;
+}
+
+.navMenu{
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    position: absolute;
 }
 
 .menu{
@@ -328,9 +356,7 @@ iframe {
         max-height: 50vh;
     }
 
-    .panelLabel{ 
-        width: 100%;
-    }
+    .panelLabel{ width: 100%;}
 }
 
 /*Desktop*/
